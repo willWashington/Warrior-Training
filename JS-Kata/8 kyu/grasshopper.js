@@ -44,3 +44,46 @@ function main (input) {
   }
   }
 
+//---https://www.codewars.com/kata/grasshopper-terminal-game-move-function/train/javascript
+// Terminal game move function
+// In this game, the hero moves from left to right. The player rolls the dice and moves the number of spaces indicated by the dice two times.
+// Create a function for the terminal game that takes the current position of the hero and the roll (1-6) and return the new position.
+// Example:
+// move(3, 6) should equal 15
+
+function move (position, roll) {
+  return (roll*2)+position;
+}
+
+//---https://www.codewars.com/kata/third-angle-of-a-triangle/train/javascript
+// You are given two angles (in degrees) of a triangle.
+// Write a function to return the 3rd.
+// Note: only positive integers will be tested.
+  //--from research: found that all angles of a triangle add up to 180 degrees, therefore:
+
+function otherAngle(a, b) {
+  return (180-a)-b;
+}
+
+//https://www.codewars.com/kata/counting-sheep-dot-dot-dot/train/javascript
+// Consider an array of sheep where some sheep may be missing from their place. 
+// We need a function that counts the number of sheep present in the array (true means present).
+// For example,
+// [true,  true,  true,  false,
+//   true,  true,  true,  true ,
+//   true,  false, true,  false,
+//   true,  false, false, true ,
+//   true,  true,  true,  true ,
+//   false, false, true,  true]
+// The correct answer would be 17.
+function countSheeps(arrayOfSheep) {
+  let counter = 0;
+  arrayOfSheep.forEach(function(element) {
+    if(element === true) {
+      counter++
+    }
+  });
+  return counter;
+}
+
+
