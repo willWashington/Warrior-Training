@@ -1,6 +1,6 @@
 //-------------https://www.codewars.com/kata/grasshopper-summation/train/javascript
 //Write a program that finds the summation of every number from 1 to num.
-  //The number will always be a positive integer greater than 0.
+//The number will always be a positive integer greater than 0.
 
 var summation = function (num) {
   let testNum = 0;
@@ -19,7 +19,7 @@ var summation = function (num) {
 // name equals owner	'Hello boss'
 // otherwise 'Hello guest'
 
-function greet (name, owner) {
+function greet(name, owner) {
   return (name === owner ? "Hello boss" : "Hello guest");
 }
 
@@ -33,8 +33,8 @@ function greet (name, owner) {
 // "backward": call the backward() function, and return its result
 // anything else: return "Not a valid input."
 
-function main (input) {
-  switch (input){
+function main(input) {
+  switch (input) {
     case "forward":
       return forward();
     case "backward":
@@ -42,7 +42,7 @@ function main (input) {
     default:
       return "Not a valid input."
   }
-  }
+}
 
 //---https://www.codewars.com/kata/grasshopper-terminal-game-move-function/train/javascript
 // Terminal game move function
@@ -51,22 +51,22 @@ function main (input) {
 // Example:
 // move(3, 6) should equal 15
 
-function move (position, roll) {
-  return (roll*2)+position;
+function move(position, roll) {
+  return (roll * 2) + position;
 }
 
 //---https://www.codewars.com/kata/third-angle-of-a-triangle/train/javascript
 // You are given two angles (in degrees) of a triangle.
 // Write a function to return the 3rd.
 // Note: only positive integers will be tested.
-  //--from research: found that all angles of a triangle add up to 180 degrees, therefore:
+//--from research: found that all angles of a triangle add up to 180 degrees, therefore:
 
 function otherAngle(a, b) {
-  return (180-a)-b;
+  return (180 - a) - b;
 }
 
 //https://www.codewars.com/kata/counting-sheep-dot-dot-dot/train/javascript
-// Consider an array of sheep where some sheep may be missing from their place. 
+// Consider an array of sheep where some sheep may be missing from their place.
 // We need a function that counts the number of sheep present in the array (true means present).
 // For example,
 // [true,  true,  true,  false,
@@ -78,12 +78,31 @@ function otherAngle(a, b) {
 // The correct answer would be 17.
 function countSheeps(arrayOfSheep) {
   let counter = 0;
-  arrayOfSheep.forEach(function(element) {
-    if(element === true) {
+  arrayOfSheep.forEach(function (element) {
+    if (element === true) {
       counter++
     }
   });
   return counter;
 }
 
+//https://www.codewars.com/kata/remove-string-spaces/train/javascript
+//Simple, remove the spaces from the string, then return the resultant string.
+function noSpace(x) {
+  return x.replace(/\s/g, '');
+}
 
+//https://www.codewars.com/kata/well-of-ideas-easy-version/train/javascript
+//For every good kata idea there seem to be quite a few bad ones!
+//In this kata you need to check the provided array (x) for good ideas 'good' and bad ideas 'bad'. If there are one or two good ideas, return 'Publish!', if there are more than 2 return 'I smell a series!'. If there are no good ideas, as is often the case, return 'Fail!'.
+
+
+function well(x){
+  if (x.filter(word => word.length > 3).length > 0) {
+    if (x.filter(word => word.length > 3).length < 3) {
+      return "Publish!";
+    }
+    return "I smell a series!";
+  }
+  return "Fail!";
+}
